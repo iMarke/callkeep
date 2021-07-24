@@ -296,14 +296,14 @@ class FlutterCallkeep extends EventManager {
 
   Future<bool> _setupAndroid(Map<String, dynamic> options) async {
     await _channel.invokeMethod<void>('setup', {'options': options});
-    final showAccountAlert = await _checkPhoneAccountPermission(
-        options['additionalPermissions'] as List<String>?);
-    final shouldOpenAccounts = await _alert(options, showAccountAlert);
+    // final showAccountAlert = await _checkPhoneAccountPermission(
+    //     options['additionalPermissions'] as List<String>?);
+    // final shouldOpenAccounts = await _alert(options, showAccountAlert);
 
-    if (shouldOpenAccounts) {
-      await _openPhoneAccounts();
-      return true;
-    }
+    // if (shouldOpenAccounts) {
+    //   await _openPhoneAccounts();
+    //   return true;
+    // }
     return false;
   }
 
