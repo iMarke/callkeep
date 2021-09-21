@@ -72,12 +72,9 @@ class FlutterCallkeep extends EventManager {
 
   Future<bool> _hasDefaultPhoneAccount(Map<String, dynamic> options) async {
     final hasDefault = await _checkDefaultPhoneAccount();
-    final shouldOpenAccounts = await _alert(options, hasDefault);
-    if (shouldOpenAccounts) {
-      await _openPhoneAccounts();
-      return true;
-    }
-    return false;
+    // final shouldOpenAccounts = await _alert(options, hasDefault);
+    await _openPhoneAccounts();
+    return true;
   }
 
   Future<void> displayIncomingCall(String uuid, String handle,
