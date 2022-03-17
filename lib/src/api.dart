@@ -158,7 +158,7 @@ class FlutterCallkeep extends EventManager {
           .invokeMethod<void>('rejectCall', <String, dynamic>{'uuid': uuid});
     } else {
       await _channel
-          .invokeMethod<void>('endCall', <String, dynamic>{'uuid': uuid});
+          .invokeMethod<void>('rejectCall', <String, dynamic>{'uuid': uuid});
     }
   }
 
