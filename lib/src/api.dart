@@ -58,7 +58,8 @@ class FlutterCallkeep extends EventManager {
       BuildContext context, Map<String, dynamic> options) async {
     _context = context;
     if (!isIOS) {
-      return await _hasDefaultPhoneAccount(options);
+      return await _hasDefaultPhoneAccount(
+          options['android'] as Map<String, dynamic>);
     }
 
     // return true on iOS because we don't want to block the endUser
